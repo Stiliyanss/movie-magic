@@ -5,6 +5,6 @@ import movieController from './controllers/movie-controller.js';
 const routes = express.Router();
 
 routes.use(homeController);
-routes.use(movieController);
+routes.use('/movies',movieController);
 
 export default routes;
