@@ -16,5 +16,8 @@ export default {
     });
     return newId;
   },
+  getAll(){
+    return movies;
   }
+
 }
