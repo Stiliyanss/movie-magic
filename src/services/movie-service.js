@@ -9,13 +9,13 @@ export default {
   return result;
   },
   create(movieData){
-
-    movies.push({
-      id: newId,
+    const result = Movie.create({
       ...movieData,
-      rating:Number(movieData.rating)
+      rating:Number(movieData.rating),
+      year:Number(movieData.year)
     });
-    return newId;
+
+    return result;
   },
     getAll(filter= {}){
     let query = Movie.find({});
