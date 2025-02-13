@@ -2,7 +2,7 @@ import Movie from '../models/Movie.js';
 
 export default {
   getOne(movieId){
-    const result = Movie.findById(movieId);
+    const result = Movie.findById(movieId).populate('casts');
 
   return result;
   },
