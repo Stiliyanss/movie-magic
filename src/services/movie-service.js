@@ -40,6 +40,8 @@ export default {
 
     return movie;
     //2nd way to attach
+
+    //return Movie.findByIdAndUpdate(movieId, {$push: {casts:castId}})
   }
 
 }
