@@ -5,5 +5,8 @@ export default{
     //TODO: create cast
     return Cast.create(castData);
     
+  },
+  getAll(){
+    return Cast.find({});
   }
 }
