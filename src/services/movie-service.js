@@ -30,6 +30,16 @@ export default {
       query=query.where({year: Number(filter.year)});
     }
     return query;
+  },
+
+  async attachCast(movieId,castId){
+    //1st way to attach
+    const movie = await Movie.findById(movieId);
+    movie.casts.push(castId);
+    await movie.save();
+
+    return movie;
+    //2nd way to attach
   }
 
 }
