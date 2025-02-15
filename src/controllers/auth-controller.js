@@ -22,7 +22,7 @@ authController.post('/login', async(req,res)=>{
 
   try {
     const token = await authService.login(email,password);
-    res.cookie('auth',token);
+    res.cookie('auth',token, {httpOnly:true});
 
     return res.redirect('/');
   } catch (error) {
