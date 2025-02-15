@@ -22,15 +22,14 @@ authController.post('/login', async(req,res)=>{
 
   try {
     const token = await authService.login(email,password);
-    console.log(token);
-    
+    res.cookie('auth',token);
 
+    return res.redirect('/');
   } catch (error) {
     console.log(error.message);
     return res.redirect('/404');
   }
 
-  res.redirect('/')
 })
 
 export default authController;
